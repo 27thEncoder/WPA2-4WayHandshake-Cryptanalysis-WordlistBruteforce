@@ -17,3 +17,15 @@
 
 ***LET,S BEGIN !!!!***
 
+**TOOLS-NEEDED**
+* [WIFI-ADAPTER](https://www.tp-link.com/in/home-networking/adapter/tl-wn725n/) (Supports, Monitor Mode & Packet Injection with proper DKMS drivers !!!)
+
+* [KALI LINUX](https://www.kali.org/) (Not Necessary!!, But i love this, as Kali is Built for ETHICAL HACKING !!!)
+* [Aircrack-ng](www.aircrack-ng.org)
+* [Airodump-ng](https://www.aircrack-ng.org/doku.php?id=airodump-ng)
+* [Aireplay-ng](https://www.aircrack-ng.org/doku.php?id=aireplay-ng)
+* [Wireshark](https://www.wireshark.org/)
+* [ROCK-YOU WORDLIST](https://weakpass.com/wordlists/rockyou.txt)
+
+* ### THE FLOW....
+* 
