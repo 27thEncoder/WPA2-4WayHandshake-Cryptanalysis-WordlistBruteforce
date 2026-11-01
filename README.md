@@ -6,7 +6,7 @@
 
 * This project is a definitive piece of my portfolio for the **B.Cyber selection program hosted by IIT Kanpur and IIT Madras**, serving as explicit, documented evidence of my prior foundational work in network infrastructure analysis and practical security engineering.
 
- > 🚫 ### DISCLAIMER !!!!
+🚫 ### DISCLAIMER !!!!
 
 **IMPORTANT NOTICE:**  The contents, code snippets, methodologies, and technical documentation in this repository are solely and strictly for **educational purposes, defensive research, and academic evaluation** ONLY !!!!!
 * **Authorized Testing Only:** The entire wireless auditing sequence including interface monitoring, packet sniffing, frame injection, and cryptographic dictionary attacks was executed inside a isolated, private laboratory environment the AUTHOR OWNS !!
