@@ -26,8 +26,8 @@
 * [Airodump-ng](https://www.aircrack-ng.org/doku.php?id=airodump-ng)
 * [Aireplay-ng](https://www.aircrack-ng.org/doku.php?id=aireplay-ng)
 * [Wireshark](https://www.wireshark.org/)
-* [ROCK-YOU WORDLIST](https://weakpass.com/wordlists/rockyou.txt)
-
+* [ROCK-YOU WORDLIST](https://weakpass.com/wordlists/rockyou.txt) (YOU CAN CREATE YOUR OWN WORDLIST TOO!!! ENSURE YOUR WORDLIST CONTAINS THE PASSWORD!! THAT SHOULD BE THE QUALITY OF THE WORDLIST YOU CHOOSE!!)
+  
 ### THE FLOW....
 * I will be using 2 Wifi adapters of kind i mentioned before as i believe **DEAUTH-ATTACK** is far more Successful when i dedicate one for the attack while the other one to listen for the Handshake !!!
 * Firstly, we would be Enabling the **MONITOR MODE** for the tools we use to spit out HUMAN READABLE data instead of machine code which the tools can,t interpret..
@@ -37,5 +37,8 @@
 * Lastly we would be launching a Dictionary Attack against the Rockyou.txt Wordlist for matching the keys and successfully getting the password
 * And HENCE WE WOULD ACHIEVE WHAT WE NEED !!!
 
-### STEP 1
+### STEP 1 (Configuring INTERFACES to MONITOR MODE)
+* firstly check whether the Devices are connected to the Operating system...this can be done in linux by entering "lsblk" in the terminal
+
+
 
