@@ -1,4 +1,4 @@
-#### A streamlined utility for capturing 4-way handshakes and executing wordlist attacks.
+# A streamlined utility for capturing 4-way handshakes and executing wordlist attacks.
 
 ### INTRODUCTION
 
