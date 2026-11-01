@@ -1,0 +1,2 @@
+# WPA2-4WayHandshake-Cryptanalysis-WordlistBruteforce
+A hands-on cybersecurity project demonstrating how to intercept raw 802.11 network traffic to capture a WPA2 4-way handshake, by placing wireless interface into monitor mode,and run an offline wordlist brute-force attack to filter out the network password. Built entirely to analyze physical-layer vulnerabilities and understand protocol hardening.
