@@ -1,3 +1,5 @@
+#### A streamlined utility for capturing 4-way handshakes and executing wordlist attacks.
+
 ### INTRODUCTION
 
 * As a Class 11 student, navigating the engineering landscape, This repository is based on how to Capture a 4-Way Handshake of **IEEE 802.11i (WPA2-PSK)** Architecture and Analysing it through Wireshark and proceed with a **BRUTE-FORCE** Dictionary attack to get the Password !!!
