@@ -14,7 +14,8 @@
 * **Compliance with Legal Frameworks:** Unauthorized interception of wireless data networks, executing deauthentication frame injection against third-party hardware, or attempting to crack security credentials without explicit owner consent is illegal.
 * **In India, such actions violate the **Information Technology Act, 2000 (Section 43 and Section 66)** and can lead to severe criminal prosecution and financial liabilities.**
 * **Zero Liability:** The author assumes absolutely no responsibility or liability for any misuse, damage, systemic disruption, or illegal deployment of the technical information documented within this repository.
-
+***NOthing here is AI-GENERATED, it,s my sole hand typing and my Knowledge and practical Documentary rather than Copy pasting.....However , the Law Details and Disclaimer are searched for in the google....***
+  
 ***LET,S BEGIN !!!!***
 
 **TOOLS-NEEDED**
