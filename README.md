@@ -41,7 +41,7 @@
 * And HENCE WE WOULD ACHIEVE WHAT WE NEED !!!
 
 ### STEP 1 (Configuring INTERFACES to MONITOR MODE)
-* firstly check whether the Devices are connected to the Operating system...this can be done in linux by entering "lsblk" in the terminal
+* firstly check whether the Devices are connected to the Operating system...this can be done in linux by entering "lsusb" in the terminal
 
 
 
