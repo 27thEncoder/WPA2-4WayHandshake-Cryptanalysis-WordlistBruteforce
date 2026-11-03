@@ -1,5 +1,5 @@
 # 🛜🐧 A streamlined utility for capturing 4-way handshakes and executing wordlist attacks.
-## DOcumentary Managed and Authenticated by: - MADHAN.M (27thEncoder)
+## Documentary Managed and Authenticated by: - MADHAN.M (27thEncoder)
 
 ### INTRODUCTION
 
