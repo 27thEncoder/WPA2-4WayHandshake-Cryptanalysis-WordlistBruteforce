@@ -56,7 +56,7 @@ sudo ip link set wlan0 up
 * You can do the second one too, by changing `wlan0` to `wlan1` Wherever Possible !!!!
 
 ### STEP 2 (Wireless Reconnaissance)
-Now, Let,s Start the Airodump-ng suite for Identifying the channel and the BROADCAST ADDRESS of the ACCESS POINT !!!!
+Now, Let,s Start the Airodump-ng suite for Identifying the channel,One or More CLIENT,S Address(Must) and the BROADCAST ADDRESS of the ACCESS POINT !!!!
 # BASH TERMINAL
 ```BASH TERMINAL
 sudo airodump-ng wlan0
