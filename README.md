@@ -1,7 +1,7 @@
 # 🛜🐧 A streamlined utility for capturing 4-way handshakes and executing wordlist attacks.
 ## Documentary Managed and Authenticated by: - MADHAN.M (27thEncoder)
 
-### INTRODUCTION
+# INTRODUCTION
 
 * As a Class 11 student, navigating the engineering landscape, This repository is based on how to Capture a 4-Way Handshake of **IEEE 802.11i (WPA2-PSK)** Architecture and Analysing it through Wireshark and proceed with a **BRUTE-FORCE** Dictionary attack to get the Password !!!
 
@@ -21,7 +21,7 @@
   
 ***LET,S BEGIN !!!!***
 
-**TOOLS-NEEDED**
+# TOOLS-NEEDED
 * [WIFI-ADAPTER](https://www.tp-link.com/in/home-networking/adapter/tl-wn725n/) (Supports, Monitor Mode & Packet Injection with proper DKMS drivers !!!)
 
 * [KALI LINUX](https://www.kali.org/) (Not Necessary!!, But i love this, as Kali is Built for ETHICAL HACKING !!!)
@@ -31,7 +31,7 @@
 * [Wireshark](https://www.wireshark.org/)
 * [ROCK-YOU WORDLIST](https://weakpass.com/wordlists/rockyou.txt) (You can choose your own wordlist too!!..just make sure you choose that wordlist which has the password..OR Create ONE!!!!)
   
-### THE FLOW....
+# THE FLOW....
 * I will be using 2 Wifi adapters of kind i mentioned before as i believe **DEAUTH-ATTACK** is far more Successful when i dedicate one for the attack while the other one to listen for the Handshake !!!
 * Firstly, we would be Enabling the **MONITOR MODE** for the tools we use to spit out HUMAN READABLE data instead of machine code which the tools can,t interpret..
 * Secondly, we would launch the **Airodump-ng** tool to first get the necessary informations (ESSID, CHANNEL, Captured file,s name for easy access)
@@ -40,13 +40,12 @@
 * Lastly we would be launching a Dictionary Attack against the Rockyou.txt Wordlist for matching the keys and successfully getting the password
 * And HENCE WE WOULD ACHIEVE WHAT WE NEED !!!
 
-### STEP 1 (Configuring INTERFACES to MONITOR MODE)
+# STEP 1 (Configuring INTERFACES to MONITOR MODE)
 * firstly check whether the Devices are connected to the Operating system...this can be done in linux by entering `lsusb` in the terminal
 ![Lsusb](./lsusb.jpg)
 
 * as you can see there are 2 USB WIFI ADAPTERS available and connected...lets put them both into Monitor mode
 * GO ahead and put the interface down, impose monitor mode and Enable it with these commands
-# BASH Terminal
 ```Bash Terminal
 sudo ip link set wlan0 down
 sudo iw wlan0 set type monitor
@@ -56,9 +55,8 @@ sudo ip link set wlan0 up
 ![Monitor](./monitor.jpg)
 * You can do the second one too, by changing `wlan0` to `wlan1` Wherever Possible !!!!
 
-### STEP 2 (Wireless Reconnaissance)
+# STEP 2 (Wireless Reconnaissance)
 Now, Let,s Start the Airodump-ng suite for Identifying the channel,One or More CLIENT,S Address(Must) and the BROADCAST ADDRESS of the ACCESS POINT !!!!
-# BASH TERMINAL
 ```BASH TERMINAL
 sudo airodump-ng wlan0
 ```
