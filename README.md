@@ -52,9 +52,16 @@ sudo ip link set wlan0 down
 sudo iw wlan0 set type monitor
 sudo ip link set wlan0 up
 ```
-* After changing into MOnitor mode, YOU can check by typing `iwconfig` as here
+* After changing into Monitor mode, YOU can check by typing `iwconfig` as here
 ![Monitor](./monitor.jpg)
-* You can do the second one too by changing `wlan0` to `wlan1` Wherever Possible !!!!
+* You can do the second one too, by changing `wlan0` to `wlan1` Wherever Possible !!!!
 
 ### STEP 2 (Wireless Reconnaissance)
-* 
+Now, Let,s Start the Airodump-ng suite for Identifying the channel and the BROADCAST ADDRESS of the ACCESS POINT !!!!
+# BASH TERMINAL
+```BASH TERMINAL
+sudo airodump-ng wlan0
+```
+(Sometimes, the interface in which MOnitor mode is enabled ,may change its name to `wlan0mon` So check that too in Case.....)
+
+* Now, You can see Details,Informations which Normally Your Computer wont Expose Basically !!!!!
