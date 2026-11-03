@@ -29,7 +29,7 @@
 * [Airodump-ng](https://www.aircrack-ng.org/doku.php?id=airodump-ng)
 * [Aireplay-ng](https://www.aircrack-ng.org/doku.php?id=aireplay-ng)
 * [Wireshark](https://www.wireshark.org/)
-* [ROCK-YOU WORDLIST](https://weakpass.com/wordlists/rockyou.txt) (YOU CAN CREATE YOUR OWN WORDLIST TOO!!! ENSURE YOUR WORDLIST CONTAINS THE PASSWORD!! THAT SHOULD BE THE QUALITY OF THE WORDLIST YOU CHOOSE!!)
+* [ROCK-YOU WORDLIST](https://weakpass.com/wordlists/rockyou.txt) (You can choose your own wordlist too!!..just make sure you choose that wordlist which has the password..OR Create ONE!!!!)
   
 ### THE FLOW....
 * I will be using 2 Wifi adapters of kind i mentioned before as i believe **DEAUTH-ATTACK** is far more Successful when i dedicate one for the attack while the other one to listen for the Handshake !!!
@@ -41,7 +41,20 @@
 * And HENCE WE WOULD ACHIEVE WHAT WE NEED !!!
 
 ### STEP 1 (Configuring INTERFACES to MONITOR MODE)
-* firstly check whether the Devices are connected to the Operating system...this can be done in linux by entering "lsusb" in the terminal
+* firstly check whether the Devices are connected to the Operating system...this can be done in linux by entering `lsusb` in the terminal
+![Lsusb](./lsusb.jpg)
 
+* as you can see there are 2 USB WIFI ADAPTERS available and connected...lets put them both into Monitor mode
+* GO ahead and put the interface down, impose monitor mode and Enable it with these commands
+# BASH Terminal
+```Bash Terminal
+sudo ip link set wlan0 down
+sudo iw wlan0 set type monitor
+sudo ip link set wlan0 up
+```
+* After changing into MOnitor mode, YOU can check by typing `iwconfig` as here
+![Monitor](./monitor.jpg)
+* You can do the second one too by changing `wlan0` to `wlan1` Wherever Possible !!!!
 
-
+### STEP 2 (Wireless Reconnaissance)
+* 
