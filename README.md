@@ -18,7 +18,6 @@
 * **Zero Liability:** The author assumes absolutely no responsibility or liability for any misuse, damage, systemic disruption, or illegal deployment of the technical information documented within this repository.
 ***NOthing here is AI-GENERATED, it,s my sole hand typing and my Knowledge and practical Documentary rather than Copy pasting.....However , the Law Details and Disclaimer are searched for in the google....***
   
-                    ---
 ***LET,S BEGIN !!!!***
 
 **TOOLS-NEEDED**
@@ -62,6 +61,6 @@ Now, Let,s Start the Airodump-ng suite for Identifying the channel and the BROAD
 ```BASH TERMINAL
 sudo airodump-ng wlan0
 ```
-(Sometimes, the interface in which MOnitor mode is enabled ,may change its name to `wlan0mon` So check that too in Case.....)
+(Sometimes, the interface in which Monitor mode is enabled ,may change its name to `wlan0mon` So check that too in Case.....)
 
-* Now, You can see Details,Informations which Normally Your Computer wont Expose Basically !!!!!
+* Now, You can see Details,info which Normally Your Computer wont Expose Basically !!!!!
