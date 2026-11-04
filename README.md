@@ -68,11 +68,11 @@ sudo airodump-ng wlan0
 
 * Now, You can see Details,info which Normally Your Computer wont Expose Basically !!!!!
 ![Airodump-ng-watch](./Scanning-with-airodump-ng.jpg)
-* As you can see, there is my AP(PRofessor M) which i,m gonna Attack....(WITH A CLIENT)
+* As you can see, there is my AP(Professor M) which i,m gonna Attack....(WITH A CLIENT)
 so its clear that the Address = 96:AB:91:B5:63:68, Channel = 11
 
 # STEP 3 (Starting The Attack)
-Now, we,ll Divert our Both Netwrok Adapters to the Channel 11 by this command
+Now, we,ll Divert our Both Network Adapters to the Channel 11 by this command
 ```Bash Terminal
 sudo iwconfig wlan0 channel 11
 sudo iwconfig wlan1 channel 11
@@ -91,11 +91,11 @@ sudo aireplay-ng --deauth 0 -a 96:AB:91:B5:63:68 -c 7C:FA:80:26:71:B4 wlan1
 ```
 ![Deauth view](./Deauth.jpg)
 
-* Now, You can see the parameters Fluctuating crazy....in our Listener
+* **Now, You can see the parameters Fluctuating crazy....in our Listener**
 ![Attack-result](./Client-losing.jpg)
-This proves our Deauth Attack is working...
+**This proves our Deauth Attack is working...**
 
-* Now as you van see, the Client tried to connect to the network again and failed after kicking it out through deauth attack
+* **Now as you van see, the Client tried to connect to the network again and failed after kicking it out through deauth attack**
 ![Client faah](./Client-Failure.png)
 
 **But, we Captured a Handshake !!!!**
@@ -103,7 +103,7 @@ This proves our Deauth Attack is working...
 
 # STEP 4 ( The Offline Work !!!!)
 * Now you an see some capture Notes files in your user directory
-![Handhake display](./Handhsake-display.jpg)
+![Handshake display](./Handhsake-display.jpg)
 
 * Now let,s open Wireshark and filter to see our EAPOL Messages...
 ![EAPOL](./wireshark-eapol-display.jpg)
@@ -118,8 +118,19 @@ aircrack-ng hack1-01.cap -w /usr/share/wordlists/rockyou.txt
 **Now we got the password !!!!**
 ![pass show](./Pass-show-end.jpg)
 
-yeah the pass is **mamamiamarcello**
+* **yeah the pass is mamamiamarcello**
 
-# Never SET A PASSWORD THIS EASY AS IT IS EASY FOR A BASIC DICTIONARY WORDLIST TO CRACK YOU,re PASSWORD!!!!
+# Never set a password this easy !!!!!!!!
 
-*
+# How to Completely Prevent and Block This Attack
+
+To fully secure a wireless network against the monitor mode interception, deauthentication injection, and offline cracking pipeline demonstrated in this project, implement these three mandatory architectural defenses:
+
+• Turn on PMF (Protected Management Frames): The only reason I was able to kick the device off the network using aireplay-ng is because Wi-Fi disconnection commands are unencrypted by default. Turning on PMF cryptographically signs those commands. If an attacker tries to inject fake disconnect frames, the router ignores them. No disconnect means no handshake to steal.
+• Switch to WPA3-SAE: WPA2 is old and inherently flawed because it leaks the data needed to crack passwords offline. If your router supports it, switch the security setting to WPA3. WPA3 uses a completely different handshake style that makes offline wordlist cracking physically impossible.
+• Use a Long, Random Password (16+ Characters): If you are stuck using WPA2, your only defense is math. Don't use real words, names, or dates that are sitting inside wordlists like rockyou.txt. Use a long, completely chaotic string of random letters, numbers, and symbols. Even if someone intercepts your handshake, a long random password will take hundreds of years to crack, making their capture file completely useless.
+• Disable WPS: Turn off Wi-Fi Protected Setup entirely. It uses a basic 8-digit PIN that bypasses your strong password completely and can be hacked in a few hours.
+
+
+# THANK YOU FOR GOING THROUGH THIS DOCUMENTARY !!!!....TOGETHER WE,LL SECURE THE WORLD !!!!!
+
