@@ -81,7 +81,8 @@ now, if we make our first interface to listen for a handshake and name it `hack1
 ```Bash Terminal
 sudo airodump-ng -w hack1 -c 11 --bssid 96:AB:91:B5:63:68 wlan0
 ```
-We are Gifted with this output which is crucial
+*We are Gifted with this output which is crucial
+
 ![AP locked at channel 11 with clearance](./Client-locked-airodump.jpg)
 * This make sure to captures the handshake and even show whether our attack worked...
 
@@ -93,17 +94,26 @@ sudo aireplay-ng --deauth 0 -a 96:AB:91:B5:63:68 -c 7C:FA:80:26:71:B4 wlan1
 
 * **Now, You can see the parameters Fluctuating crazy....in our Listener**
 ![Attack-result](./Client-losing.jpg)
+
 **This proves our Deauth Attack is working...**
 
-* **Now as you van see, the Client tried to connect to the network again and failed after kicking it out through deauth attack**
+
+
+* **Now as you can see, the Client tried to connect to the network again and failed after kicking it out through deauth attack**
 ![Client faah](./Client-Failure.png)
 
+
 **But, we Captured a Handshake !!!!**
+
 ![Handshake success](./Handshake-success.jpg)
+
+
 
 # STEP 4 ( The Offline Work !!!!)
 * Now you an see some capture Notes files in your user directory
 ![Handshake display](./Handhsake-display.jpg)
+
+
 
 * Now let,s open Wireshark and filter to see our EAPOL Messages...
 ![EAPOL](./wireshark-eapol-display.jpg)
@@ -115,8 +125,11 @@ sudo aireplay-ng --deauth 0 -a 96:AB:91:B5:63:68 -c 7C:FA:80:26:71:B4 wlan1
 ```Bash Terminal
 aircrack-ng hack1-01.cap -w /usr/share/wordlists/rockyou.txt
 ```
+
 **Now we got the password !!!!**
+
 ![pass show](./Pass-show-end.jpg)
+
 
 * **yeah the pass is mamamiamarcello**
 
@@ -126,10 +139,10 @@ aircrack-ng hack1-01.cap -w /usr/share/wordlists/rockyou.txt
 
 To fully secure a wireless network against the monitor mode interception, deauthentication injection, and offline cracking pipeline demonstrated in this project, implement these three mandatory architectural defenses:
 
-• Turn on PMF (Protected Management Frames): The only reason I was able to kick the device off the network using aireplay-ng is because Wi-Fi disconnection commands are unencrypted by default. Turning on PMF cryptographically signs those commands. If an attacker tries to inject fake disconnect frames, the router ignores them. No disconnect means no handshake to steal.
-• Switch to WPA3-SAE: WPA2 is old and inherently flawed because it leaks the data needed to crack passwords offline. If your router supports it, switch the security setting to WPA3. WPA3 uses a completely different handshake style that makes offline wordlist cracking physically impossible.
-• Use a Long, Random Password (16+ Characters): If you are stuck using WPA2, your only defense is math. Don't use real words, names, or dates that are sitting inside wordlists like rockyou.txt. Use a long, completely chaotic string of random letters, numbers, and symbols. Even if someone intercepts your handshake, a long random password will take hundreds of years to crack, making their capture file completely useless.
-• Disable WPS: Turn off Wi-Fi Protected Setup entirely. It uses a basic 8-digit PIN that bypasses your strong password completely and can be hacked in a few hours.
+* Turn on PMF (Protected Management Frames): The only reason I was able to kick the device off the network using aireplay-ng is because Wi-Fi disconnection commands are unencrypted by default. Turning on PMF cryptographically signs those commands. If an attacker tries to inject fake disconnect frames, the router ignores them. No disconnect means no handshake to steal.
+* Switch to WPA3-SAE: WPA2 is old and inherently flawed because it leaks the data needed to crack passwords offline. If your router supports it, switch the security setting to WPA3. WPA3 uses a completely different handshake style that makes offline wordlist cracking physically impossible.
+* Use a Long, Random Password (16+ Characters): If you are stuck using WPA2, your only defense is math. Don't use real words, names, or dates that are sitting inside wordlists like rockyou.txt. Use a long, completely chaotic string of random letters, numbers, and symbols. Even if someone intercepts your handshake, a long random password will take hundreds of years to crack, making their capture file completely useless.
+* Disable WPS: Turn off Wi-Fi Protected Setup entirely. It uses a basic 8-digit PIN that bypasses your strong password completely and can be hacked in a few hours.
 
 
 # THANK YOU FOR GOING THROUGH THIS DOCUMENTARY !!!!....TOGETHER WE,LL SECURE THE WORLD !!!!!
