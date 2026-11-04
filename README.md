@@ -89,22 +89,37 @@ We are Gifted with this output which is crucial
 ```Bash Terminal
 sudo aireplay-ng --deauth 0 -a 96:AB:91:B5:63:68 -c 7C:FA:80:26:71:B4 wlan1
 ```
-[Deauth view](./Deauth.jpg)
+![Deauth view](./Deauth.jpg)
 
 * Now, You can see the parameters Fluctuating crazy....in our Listener
-[Attack-result](./Client-losing.jpg)
+![Attack-result](./Client-losing.jpg)
 This proves our Deauth Attack is working...
 
 * Now as you van see, the Client tried to connect to the network again and failed after kicking it out through deauth attack
-[Client faah](./Client-Failure.jpg)
+![Client faah](./Client-Failure.png)
 
 **But, we Captured a Handshake !!!!**
-[Handshake success](./Handshake-success.jpg)
+![Handshake success](./Handshake-success.jpg)
 
 # STEP 4 ( The Offline Work !!!!)
 * Now you an see some capture Notes files in your user directory
-[Handhake display](./Handshake-display.jpg)
+![Handhake display](./Handhsake-display.jpg)
 
+* Now let,s open Wireshark and filter to see our EAPOL Messages...
+![EAPOL](./wireshark-eapol-display.jpg)
+* Everything is clear......
 
+# FINAL STEP (Dictionary Attack)
 
+* Now let,s Use aircrack-ng to do the Dictionary Attack
+```Bash Terminal
+aircrack-ng hack1-01.cap -w /usr/share/wordlists/rockyou.txt
+```
+**Now we got the password !!!!**
+![pass show](./Pass-show-end.jpg)
 
+yeah the pass is **mamamiamarcello**
+
+# Never SET A PASSWORD THIS EASY AS IT IS EASY FOR A BASIC DICTIONARY WORDLIST TO CRACK YOU,re PASSWORD!!!!
+
+*
